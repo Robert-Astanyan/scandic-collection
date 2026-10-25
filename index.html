@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10222a" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Իմ SCANDIC հավաքածուն․ բոլոր տուփերը նկարներով, բաց և փակ վիճակների հաշվառումով։" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Scandic Vault — Իմ հավաքածուն</title>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Scandic Vault գլխավոր էջ">
+        <span class="brand-icon" aria-hidden="true">✳</span>
+        <span class="brand-name">SCANDIC <em>VAULT</em></span>
+      </a>
+      <div class="top-actions">
+        <span class="tiny-signal"><span class="signal-dot"></span> MY COLLECTION</span>
+        <button class="circle-button" id="settings-btn" aria-label="Կարգավորումներ" title="Կարգավորումներ">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.5 2.6-1.7-.7a8 8 0 0 1-2.1 1.2l-.3 1.8h-3l-.3-1.8a8 8 0 0 1-2.1-1.2l-1.7.7-1.5-2.6L8 15a8 8 0 0 1 0-2.4l-1.4-1.1 1.5-2.6 1.7.7A8 8 0 0 1 11.9 8l.3-1.8h3l.3 1.8a8 8 0 0 1 2.1 1.2l1.7-.7 1.5 2.6-1.4 1.1a8 8 0 0 1 0 2.8Z" transform="translate(-1.8 -1.8)"/></svg>
+        </button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="shine">✦</span> ՔՈ ԱՆՁՆԱԿԱՆ ԹԱՆԳԱՐԱՆԸ <span class="shine">✦</span></div>
+          <h1 id="hero-title">Փոքր տուփեր։<br><span>Մեծ հավաքածու։</span></h1>
+          <p>Մի տեղում՝ քո բոլոր SCANDIC-ները, իրենց դիզայններով ու պատմությամբ։ Հավաքիր, նշիր, բացահայտիր։</p>
+          <button class="hero-cta" id="explore-btn">Բացահայտել տուփերը <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="halo halo-one"></div><div class="halo halo-two"></div>
+          <div class="tin tin-back"><div class="tin-inner"><small>THE COLLECTION</small><strong>SCANDIC</strong><span>SUGAR FREE MINTS</span></div></div>
+          <div class="tin tin-front"><div class="tin-inner"><small>ORIGINAL EDITION</small><strong>SCANDIC</strong><span>SUGAR FREE MINTS</span></div></div>
+          <span class="hero-star star-a">✳</span><span class="hero-star star-b">✧</span>
+        </div>
+        <div class="hero-bottom"><span>EST. 2026</span><span>COLLECT THE LITTLE THINGS <span aria-hidden="true">✳</span></span></div>
+      </section>
+      <section class="stats-section" aria-label="Հավաքածուի վիճակագրություն">
+        <div class="stat"><div class="stat-label">Ընդամենը տարբերակ</div><div class="stat-value" id="total-count">—</div><div class="stat-foot">կատալոգում</div></div>
+        <div class="stat"><div class="stat-label">Իմ հավաքածուում</div><div class="stat-value" id="owned-count">—</div><div class="stat-foot">առնվազն 1 տուփ</div></div>
+        <div class="stat"><div class="stat-label">Փակ տուփեր</div><div class="stat-value" id="sealed-count">—</div><div class="stat-foot">չբացված</div></div>
+        <div class="stat"><div class="stat-label">Բաց տուփեր</div><div class="stat-value" id="open-count">—</div><div class="stat-foot">բացված</div></div>
+      </section>
+      <section class="collection" id="collection" aria-labelledby="collection-title">
+        <div class="section-heading"><div><div class="overline">THE ARCHIVE · <span id="catalog-date">2026</span></div><h2 id="collection-title">Իմ հավաքածուն <span class="flower">✳</span></h2><p>Ամեն դիզայնը՝ առանձին։ Նշիր ինչն արդեն ունես։</p></div><button id="add-btn" class="add-btn"><span class="plus">+</span> Ավելացնել տուփ</button></div>
+        <div class="toolbar">
+          <label class="search-field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search" type="search" placeholder="Փնտրել համը կամ հավաքածուն…" autocomplete="off" aria-label="Փնտրել"/><kbd>⌕</kbd></label>
+          <label class="series-field"><span>Շարք</span><select id="series-filter" aria-label="Զտել ըստ շարքի"><option value="all">Բոլոր շարքերը</option></select></label>
+        </div>
+        <div class="filter-line"><div class="chips" id="status-chips" role="group" aria-label="Զտել ըստ վիճակի"><button class="chip active" data-filter="all" aria-pressed="true">Բոլորը</button><button class="chip" data-filter="owned">✓ Ունեմ</button><button class="chip" data-filter="missing">Չունեմ</button><button class="chip" data-filter="unmarked">Չեմ նշել</button></div><span class="result-count" id="result-count">Բեռնվում է…</span></div>
+        <div class="cards-grid" id="cards-grid"><div class="loading">Բեռնվում է հավաքածուն…</div></div>
+        <div id="empty-state" class="empty" hidden><div class="empty-emoji">✳</div><h3>Այստեղ դեռ ոչինչ չկա</h3><p>Փորձիր ուրիշ որոնում կամ զտիչ։</p><button class="secondary-button" id="clear-filters">Ցուցադրել բոլորը</button></div>
+        <div class="catalog-note"><span>✦</span><p>Կատալոգը դեռ լրացվում է։ Որոշ դիզայնների մոտ ընդհանուր հավաքածուի լուսանկար է. դրանք նշված են բացահայտ։ Նոր տարբերակներ կարելի է ավելացնել ցանկացած պահի։</p></div>
+      </section>
+      <footer class="footer"><div><span class="footer-logo">✳</span><strong>SCANDIC VAULT</strong><small>Փոքրիկ ուրախությունների մեծ հավաքածու։</small></div><div class="footer-right"><span>Made for a collector, with care ♡</span><button id="footer-settings" type="button">Պահպանում և համաժամեցում ↗</button></div></footer>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-heading"><h2 id="modal-title">Տուփի տվյալներ</h2><button class="close-btn" id="close-modal" aria-label="Փակել">×</button></div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
