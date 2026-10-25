@@ -86,7 +86,7 @@ function makePhoto(p,detail=false){
 }
 function toggleFavorite(id){
  const was=app.records[id]||{};
- app.records[id]={...was,favorite:!was.favorite,updatedAt:new Date().toISOString()};
+ app.records[id]={...was,status:was.status||'',favorite:!was.favorite,updatedAt:new Date().toISOString()};
  saveLocal();render();toast(app.records[id].favorite?'Ավելացվեց սիրելիների մեջ ♡':'Հեռացվեց սիրելիներից');
 }
 function card(p){
