@@ -582,6 +582,19 @@
       "position": null,
       "accent": "#b4e0b4",
       "verified": false
+    },
+    {
+      "id": "SC-048",
+      "series": "Collection · Julia Chizh",
+      "flavor": "Tropic Mix",
+      "design": "Մանուշակագույն, գունավոր մուլտիպլիկացիոն կերպարներ, կանաչ TROPIC MIX պիտակ",
+      "image": "https://sweetopt24.ru/storage/64adb9a7-2d11-11f1-82d0-941882756f44/maket-kartocki-1.jpg",
+      "source": "https://sweetopt24.ru/konfety-scandic-tropical-mix-14gr-po-optovoi-cene",
+      "imageType": "single",
+      "position": null,
+      "accent": "#8b73d8",
+      "verified": true,
+      "imageProvenance": "retailer-single-product-photo"
     }
   ]
 }
