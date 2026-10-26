@@ -18,7 +18,7 @@ const app = {
 const $ = q => document.querySelector(q);
 const $$ = q => [...document.querySelectorAll(q)];
 const esc = v => String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function safeUrl(url){try{const u=new URL(String(url));return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}}
+function safeUrl(url){try{const u=new URL(String(url),location.href);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}}
 function normalize(s){return String(s??'').toLocaleLowerCase('hy-AM').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim()}
 function labelStatus(s){return OPTIONS.find(x=>x[0]===s)?.[1]||OPTIONS[0][1]}
 function toast(message){const e=$('#toast');e.textContent=message;e.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>e.classList.remove('show'),3400)}
