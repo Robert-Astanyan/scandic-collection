@@ -59,7 +59,7 @@ function palette(p){
  if(n.includes('vangogh'))return ['#f3ecff','#dceeff','✦'];
  return ['#f4eee9','#f2e8e8','✧'];
 }
-function previewCrop(p){return !!p.position && (p.imageType==='group'||(p.series!=='Original'&&allProducts().filter(x=>x.image===p.image).length>1));}
+function previewCrop(p){return false;} // Preserve the full source photograph until an authentic individual product image is approved
 function makePhoto(p,detail=false){
  const wrap=document.createElement('div');
  wrap.className=detail?'detail-art':'product-photo';
@@ -79,7 +79,7 @@ function makePhoto(p,detail=false){
    img.onerror=()=>{img.remove();wrap.append(makePlaceholder(p));wrap.classList.add('missing-photo')};wrap.append(img);
  }else{wrap.append(makePlaceholder(p));wrap.classList.add('missing-photo')}
  if(!detail){
-   if(cropped||p.imageType==='group'){const badge=document.createElement('span');badge.className='preview-badge';badge.textContent='◈ Նախադիտում';wrap.append(badge)}
+   if(p.position||p.imageType==='group'){const badge=document.createElement('span');badge.className='preview-badge';badge.textContent='◈ Խմբային նկար';wrap.append(badge)}
    const code=document.createElement('span');code.className='product-code';code.textContent=p.id;wrap.append(code);
  }
  return wrap
