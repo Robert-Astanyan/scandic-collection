@@ -595,6 +595,19 @@
       "accent": "#8b73d8",
       "verified": true,
       "imageProvenance": "retailer-single-product-photo"
+    },
+    {
+      "id": "SC-049",
+      "series": "Kids · Cheburashka 2",
+      "flavor": "Orange",
+      "design": "Նարնջագույն տուփ՝ Չեբուրաշկայի պատկերներով, նարնջի կտորներով և «ЧЕБУРАШКА 2» գրությամբ",
+      "image": "https://catalog-cdn.detmir.st/media/9hhWgwDegfVmPVFvKCzwoqWt6W4bTnPgp60Bo2O6Ats%3D.jpeg",
+      "source": "https://www.detmir.ru/product/index/id/7047805/",
+      "imageType": "single",
+      "position": null,
+      "accent": "#ed8c30",
+      "verified": true,
+      "imageProvenance": "retailer-single-product-photo"
     }
   ]
 }
